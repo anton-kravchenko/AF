@@ -1,2 +1,5 @@
-test => npm test
-lint => npm run lint
+# Run test
+npm test
+
+# Run linter
+npm run lint
