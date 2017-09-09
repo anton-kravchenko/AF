@@ -157,8 +157,8 @@ describe("test LinkedList class", () => {
         expect(c.get(4)).toBe(4);
         expect(c.get(5)).toBe(5);
 
-        expect(c.get(6)).toBe(null);
-        expect(c.get(7)).toBe(null);
+        expect(c.get(6)).toBe(undefined);
+        expect(c.get(7)).toBe(undefined);
     });
 });
 
@@ -179,7 +179,7 @@ describe("test Node class", () => {
     test("test get/set next method", () => {
         const n: Node<number> = new Node(1);
 
-        expect(n.getNext()).toBe(null);
+        expect(n.getNext()).toBe(undefined);
 
         const next: Node<number> = new Node(3);
         n.setNext(next);
@@ -191,7 +191,7 @@ describe("test Node class", () => {
     test("test get/set prev method", () => {
         const n: Node<number> = new Node(1);
 
-        expect(n.getPrev()).toBe(null);
+        expect(n.getPrev()).toBe(undefined);
 
         const prev: Node<number> = new Node(3);
         n.setPrev(prev);

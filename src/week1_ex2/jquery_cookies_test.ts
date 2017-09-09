@@ -1,1 +1,0 @@
-const c = Jquery.cookie;

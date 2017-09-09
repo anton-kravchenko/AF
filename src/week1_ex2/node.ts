@@ -1,12 +1,12 @@
 class Node<T> {
     private value: T;
-    private next: Node<T> | null;
-    private prev: Node<T> | null;
+    private next: Node<T> | undefined;
+    private prev: Node<T> | undefined;
 
     constructor(value: T) {
         this.value = value;
-        this.next = null;
-        this.prev = null;
+        this.next = undefined;
+        this.prev = undefined;
     }
 
     public set(value: T): void {
@@ -17,28 +17,28 @@ class Node<T> {
         return this.value;
     }
 
-    public getNext(): Node<T> {
+    public getNext(): Node<T> | undefined {
         return this.next;
     }
 
-    public setNext(next: Node<T>): void {
+    public setNext(next: Node<T> | undefined): void {
         this.next = next;
     }
 
-    public getPrev(): Node<T> {
+    public getPrev(): Node<T> | undefined {
         return this.prev;
     }
 
-    public setPrev(prev: Node<T>): void  {
+    public setPrev(prev: Node<T>  | undefined): void  {
         this.prev = prev;
     }
 
     public hasNext(): boolean {
-        return null !== this.next;
+        return undefined !== this.next;
     }
 
     public hasPrev(): boolean {
-        return null !== this.prev;
+        return undefined !== this.prev;
     }
 }
 

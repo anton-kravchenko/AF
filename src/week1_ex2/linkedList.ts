@@ -3,8 +3,8 @@ import Node from "./node";
 // Implement generic for two way linked list for different items type.
 
 class LinkedList<T> {
-    private head: Node<T>;
-    private tail: Node<T>;
+    private head: Node<T> | undefined;
+    private tail: Node<T> | undefined;
     private length: number = 0;
 
     public getSize(): number {
@@ -31,25 +31,25 @@ class LinkedList<T> {
         return true;
     }
 
-    public getFirst(): T {
-        return this.head.get();
+    public getFirst(): T | undefined {
+        return this.head ? this.head.get() : this.head;
     }
 
-    public getLast(): T {
-        return this.tail.get();
+    public getLast(): T | undefined {
+        return this.tail ? this.tail.get() : this.tail;
     }
 
-    public get(index: number): T | null {
+    public get(index: number): T | undefined {
         if (0 === index) {
-            return this.head.get();
+            return this.getFirst();
         }
 
         if (index === this.getSize() - 1) {
-            return this.tail.get();
+            return this.getLast();
         }
 
         if (this.getSize() - 1 < index) {
-            return null;
+            return undefined;
         }
 
         let node = this.head;
@@ -117,7 +117,7 @@ class LinkedList<T> {
         }
 
         if (this.getSize() - 1 === index) {
-            this.tail.setNext(null);
+            this.tail.setNext(undefined);
             this.tail = this.tail.getPrev();
             this.length--;
             return true;
@@ -143,8 +143,8 @@ class LinkedList<T> {
 
     public clear(): void {
         this.length = 0;
-        this.head = null;
-        this.tail = null;
+        this.head = undefined;
+        this.tail = undefined;
     }
 }
 
