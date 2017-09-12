@@ -1,12 +1,5 @@
 import Circle from "../src/week1_ex3/circle";
 
-// Create Circle class.
-// It contains three properties x, y and radius.
-// If radius will be more that 100 and less than 0 throw exception.
-// Create method calculate circle square.
-// Create method calculate circle length.
-
-
 describe("Test Circle class", () => {
     test("Test constructor. Should init class instance with proper values", () => {
         const x: number = 10;
