@@ -49,7 +49,6 @@ module.exports = {
     },
     plugins:[
         new HtmlWebpackPlugin({
-            title: 'Hello Test',
             hash: true,
             template: './index.html'
         }),

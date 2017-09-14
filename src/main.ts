@@ -1,8 +1,8 @@
 // + all ts should be bundled with web pack.
 // + scripts add to html automatically.
 // +- images included and put to the sources via webpack
+// +scss should be transpile into css
 // All scripts should use OOP style
-// scss should be transpile into css
 // jquery should be included in common chunk(CommonChunk Plugin)
 
 
@@ -14,4 +14,4 @@
 
 import ".././images/ang.png";
 import ".././images/wp.png";
-import ".././styles.scss";
+import "../styles/styles.scss";
