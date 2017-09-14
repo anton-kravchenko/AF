@@ -9,6 +9,7 @@
       "rootDirs": ["./src"]
     },
     "exclude": [
+        "typings",
         "node_modules",
         "**/*.test.ts"
     ]

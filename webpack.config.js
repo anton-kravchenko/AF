@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const webpack = require('webpack');
 
 const extractSass = new ExtractTextPlugin({
     filename: "styles.css",
@@ -8,7 +9,7 @@ const extractSass = new ExtractTextPlugin({
 });
 
 module.exports = {
-    entry: './src/main.ts',
+    entry: './index.ts',
     module: {
         rules: [
             {
@@ -51,6 +52,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             hash: true,
             template: './index.html'
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: "jquery",
+            filename: "jquery.js"
         }),
         extractSass
     ],
