@@ -8,7 +8,7 @@ class NameInput {
     }
 
     public isValid(): boolean {
-        return this.el && this.el.val().trim().length > 0;
+        return this.el && this.el.val().trim().length > 5;
     }
 
     public render() {

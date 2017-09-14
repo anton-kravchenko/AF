@@ -2,13 +2,17 @@ import * as $ from "jquery";
 
 class EmailInput {
     el: any;
+    emailRegExp: RegExp;
 
+    constructor() {
+        this.emailRegExp = /\S+@\S+\.\S+/;
+    }
     generateComponent() {
-        return $(`<input type="email" placeholder="Email" id="emailInput"/>`);
+        return $(`<input type="text" placeholder="Email" id="emailInput"/>`);
     }
 
     public isValid(): boolean {
-        return this.el && this.el.val().trim().length > 0;
+        return this.el && this.emailRegExp.test(this.el.val().trim());
     }
 
     public render() {
