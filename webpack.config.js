@@ -18,15 +18,11 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                test: /\.png$/,
-                use: [
-                    {
-                        loader :'url-loader',
-                        options: {
-                            limit: 10000
-                        }
-                    }
-                ]
+                test: /\.(jpg|png|svg)$/,
+                loader :'url-loader',
+                options: {
+                        limit: 10000
+                }
             },
             {
                 test: /\.scss$/,
