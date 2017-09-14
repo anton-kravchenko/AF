@@ -15,6 +15,9 @@
 // If email and name is valid and button pressed should be show pop-up window with png picture on the background.
 
 import * as $ from "jquery";
+import "bootstrap-sass";
+import "bootstrap";
+// import "./styles/styles.scss";
 import SubmitForm from "./src/submitForm";
 
 const sf = new SubmitForm("#app");

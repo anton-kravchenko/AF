@@ -4,7 +4,7 @@ class SubmitButton {
     el: any;
 
     generateComponent() {
-        return $(`<button id="submit">Submit</button>`);
+        return $(`<button id="submit" class=".btn-default">Submit</button>`);
     }
 
     public render() {
